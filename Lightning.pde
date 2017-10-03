@@ -1,4 +1,4 @@
-boolean auto = false;
+
 int startX = 600;
 int startY = 200;
 int endX = 0;
@@ -10,8 +10,8 @@ void setup()
 {
   noLoop();
   size(800,800);
-  strokeWeight(10);
-  background(10);
+  strokeWeight(8);
+  background(100,100,200);
   image = loadImage("vegeta1.png");
   image2 = loadImage("vegeta2.png");
   image(image, 600, 130, 200, 200);
@@ -20,17 +20,7 @@ void draw()
 {
 
   stroke(200,0,250);
-  	if (keyPressed == true && key == 32) {
-		auto = true;
-	} else {
-		auto = false;
-	}
-
-	if (auto == true) {
-		//autoLightning();
-	}
-
-  while(endY > 0) {
+	 while(endY > 0) {
   	endX = startX - (int)(Math.random()*9);
   	endY = startY - (int)((Math.random()*20)-9);
   	line(startX,startY,endX,endY);
@@ -38,7 +28,7 @@ void draw()
   	startY = endY;
   }
 }
-void mouseClicked()
+void mousePressed()
 {
     image2 = loadImage("vegeta2.png");
 	image(image2,600,130,200,200);
