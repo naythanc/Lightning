@@ -1,9 +1,9 @@
 
 int startX = 600;
-int startY = 200;
+int startY = 190;
 int endX = 0;
 int endY = 600;
-PImage image;
+PImage image1;
 PImage image2;
 
 void setup()
@@ -12,8 +12,8 @@ void setup()
   size(800,800);
   strokeWeight(8);
   background(100,100,200);
-  image = loadImage("vegeta1.png");
-  image(image, 600, 130, 200, 200);
+  image1 = loadImage("vegeta1.png");
+  image(image1, 600, 130, 200, 200);
 }
 void draw()
 {
@@ -30,9 +30,9 @@ void draw()
 void mousePressed()
 {
     image2 = loadImage("vegeta2.png");
-	image(image2,600,130,200,250);
+	image(image2,600,115,200,250);
  	startX = 600;
- 	startY = 200;
+ 	startY = 190;
  	endX = 0;
  	endY = 600;
  	stroke(45,23,250);
